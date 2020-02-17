@@ -94,14 +94,14 @@ public class ArrayUtils {
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
 
-        /*Integer[] combineArrays = new Integer[objectArray.length + objectArrayToAdd.length];
+        /*Integer[] combined = new Integer[objectArray.length + objectArrayToAdd.length];
         Integer index = 0;
         for(Integer element : objectArray) {
-            combineArrays[index] = element;
+            combined[index] = element;
             index++;
         }
         for(Integer element : objectArrayToAdd) {
-            combineArrays[index] = element;
+            combined[index] = element;
             index++;
         }
 

@@ -10,7 +10,7 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        return deleteMultiplesOfN(ints, 2);
     }
 
     /**
@@ -19,7 +19,27 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+
+        // Get length of new Array
+        int newLength = 0;
+        for(Integer element: ints) {
+            if( element%2 != 1) {
+                newLength++;
+            }
+        }
+
+        // Input Evens into New Array
+        Integer[] deleteOdds = new Integer[newLength];
+        int index = 0;
+        for(Integer element : ints) {
+            if(element%2 != 1) {
+                deleteOdds[index] = element;
+                index++;
+            }
+        }
+
+        return deleteOdds;
+
     }
 
     /**
@@ -28,7 +48,7 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        return deleteMultiplesOfN(ints, 3);
     }
 
     /**
@@ -38,6 +58,29 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+
+        // Get length of new Array
+        int newLength = 0;
+        for(Integer element: ints) {
+            if(element%multiple != 0) {
+                newLength++;
+            }
+        }
+
+        // Input Non Multiples into New Array
+        Integer[] deleteMultilpes = new Integer[newLength];
+        int index = 0;
+        for(Integer element : ints) {
+            if(element%multiple != 0) {
+                deleteMultilpes[index] = element;
+                index++;
+            }
+        }
+
+        return deleteMultilpes;
+
     }
 }
+
+
+
