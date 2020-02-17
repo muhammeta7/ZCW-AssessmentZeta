@@ -94,7 +94,7 @@ public class PetOwner {
      * @return the number of Pet objects stored in this class
      */
     public Integer getNumberOfPets() {
-        return null;
+        return this.pets.length;
     }
 
     /**
