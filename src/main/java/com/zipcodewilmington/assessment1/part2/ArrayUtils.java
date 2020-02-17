@@ -29,17 +29,15 @@ public class ArrayUtils {
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
 
-       /* Integer[] newArray = new Integer[objectArray.length - getNumberOfOccurrences(objectArray, objectToRemove)];
+        Integer[] newArray = new Integer[objectArray.length - getNumberOfOccurrences(objectArray, objectToRemove)];
         int index = 0;
-        for(Integer element : objectArray) {
+        for(Object element : objectArray) {
             if( !element.equals(objectToRemove) ){
-                newArray[index] = element;
+                newArray[index] = (Integer) element;
                 index++;
             }
         }
-        return newArray;*/
-
-       return null;
+        return newArray;
 
     }
 
@@ -94,19 +92,20 @@ public class ArrayUtils {
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
 
-        /*Integer[] combined = new Integer[objectArray.length + objectArrayToAdd.length];
-        Integer index = 0;
-        for(Integer element : objectArray) {
-            combined[index] = element;
-            index++;
-        }
-        for(Integer element : objectArrayToAdd) {
-            combined[index] = element;
+        Integer[] combined = new Integer[objectArray.length + objectArrayToAdd.length];
+        int index = 0;
+
+        for(Object element : objectArray) {
+            combined[index] = (Integer)element;
             index++;
         }
 
-        return combineArrays;*/
+        for(Object element : objectArrayToAdd) {
+            combined[index] = (Integer) element;
+            index++;
+        }
 
-        return null;
+        return combined;
+
     }
 }
