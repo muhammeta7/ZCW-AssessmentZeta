@@ -4,17 +4,46 @@ package com.zipcodewilmington.assessment1.part3;
  * Created by leon on 2/16/18.
  */
 public class PetOwner {
+
+    private String name;
+    private Pet[] pets = new Pet[0];
+
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
+
+        this.name = name;
+        System.out.println(name);
+        if (pets != null) {
+            this.pets = new Pet[pets.length];
+        }
+
+        int index = 0;
+        if(pets != null) {
+            for (Pet element : pets) {
+                this.pets[index] = element;
+                index++;
+            }
+        }
+
+        for(Pet element : this.pets) {
+            element.setOwner(this);
+        }
+
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+
+        PetOwner po = new PetOwner("", pets);
+        Pet[] newPets = new Pet[1];
+        newPets[0] = pet;
+        this.pets = newPets;
+
     }
 
     /**
@@ -29,7 +58,13 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+
+        for (Pet element : pets) {
+            if (element.equals(pet)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -38,7 +73,6 @@ public class PetOwner {
     public Integer getYoungetPetAge() {
         return null;
     }
-
 
 
 
