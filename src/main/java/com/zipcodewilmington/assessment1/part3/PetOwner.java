@@ -15,7 +15,6 @@ public class PetOwner {
     public PetOwner(String name, Pet... pets) {
 
         this.name = name;
-        System.out.println(name);
         if (pets != null) {
             this.pets = new Pet[pets.length];
         }
@@ -39,7 +38,7 @@ public class PetOwner {
      */
     public void addPet(Pet pet) {
 
-        PetOwner po = new PetOwner("", pets);
+       // PetOwner po = new PetOwner("", pets);
         Pet[] newPets = new Pet[1];
         newPets[0] = pet;
         this.pets = newPets;
@@ -102,7 +101,7 @@ public class PetOwner {
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+        return this.name;
     }
 
     /**
