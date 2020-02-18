@@ -118,8 +118,7 @@ public class PetOwner {
         for (int i = 0; i < pets.size(); i++) {
             sum += pets.get(i).getAge();
         }
-        Float average = Float.valueOf(sum / pets.size());
-        return average;
+        return (float) (sum / pets.size());
 
     }
 
@@ -148,11 +147,12 @@ public class PetOwner {
             return noPets;
         }
 
-        Pet[] ownsPets = new Pet[pets.size()];
+
+        /*Pet[] ownsPets = new Pet[pets.size()];
         for (int i = 0; i < ownsPets.length; i++) {
             ownsPets[i] = pets.get(i);
-        }
+        }*/
 
-        return ownsPets;
+        return pets.toArray(new Pet[pets.size()]);
     }
 }

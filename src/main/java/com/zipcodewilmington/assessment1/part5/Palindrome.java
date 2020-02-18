@@ -14,12 +14,10 @@ public class Palindrome {
         // Checks all substrings using StringBuilder
         for (int i = 0; i < input.length() ; i++) {
             for (int j = i+1; j < input.length(); j++) {
-
                 StringBuilder string = new StringBuilder(input.substring(i, j+1));
                 if(string.toString().equals(string.reverse().toString())) {
                     counter++;
                 }
-
             }
         }
 
