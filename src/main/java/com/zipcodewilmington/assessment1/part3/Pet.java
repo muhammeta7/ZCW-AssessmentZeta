@@ -5,8 +5,8 @@ package com.zipcodewilmington.assessment1.part3;
  */
 public abstract class Pet implements Animal {
 
-    private String name = "";
-    private Integer age = 0;
+    private String name;
+    private Integer age;
     private PetOwner owner;
 
 
